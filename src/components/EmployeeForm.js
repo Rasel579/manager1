@@ -6,7 +6,8 @@ import { CardSection, Input } from './common';
 
 class EmployeeForm extends Component{
     render(){
-       return(
+        console.log(this.props);
+       return (
            <View>
                <CardSection>
                     <Input 
@@ -22,7 +23,7 @@ class EmployeeForm extends Component{
                      label="Phone"
                      placeholder="5555-555-555"
                      value={this.props.phone}
-                     onChangeText={text => this.props.employeeUpdate({ prop: 'phone', value: text})}
+                     onChangeText={text => this.props.employeeUpdate({ prop: "phone", value: text})}
                    />
                 </CardSection>
 

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { View } from 'react-native';
 import { employeeUpdate, employeeCreate } from '../actions';
 import { Card, CardSection,  Button } from './common';
-import EmploeeFrom from './EmployeeForm';
+import EmployeeForm from './EmployeeForm';
 
 class EmployeeCreate extends Component {
     onButtonPress(){
@@ -14,7 +15,7 @@ class EmployeeCreate extends Component {
         console.log(this.props.employee);
         return(
             <Card>
-                <EmploeeFrom { ...this.props } />
+                <EmployeeForm { ...this.props } />
                 <CardSection>
                     <Button onPress={this.onButtonPress.bind(this)}>
                         Create
